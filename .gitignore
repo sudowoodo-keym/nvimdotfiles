@@ -7,4 +7,9 @@ foo.*
 *.log
 data
 .DS_Store
+.neoconf.json 
+LICENSE
+lazy-lock.json 
+lazyvim.json 
+stylua.toml
 

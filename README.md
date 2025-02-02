@@ -5,7 +5,6 @@ Refer to the [documentation](https://lazyvim.github.io/installation) to get star
 
 # Neovim plugins require LazyVim package manager
 ### Plugins & Themes:
-- lazygit
 - kanagawa theme fallback to gruvbox
 - telescope
 - treesitter
