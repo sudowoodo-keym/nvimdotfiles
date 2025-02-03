@@ -23,12 +23,22 @@ return {
 	{
 		"williamboman/mason-lspconfig.nvim",
 		lazy = false,
-		opts = {
-			auto_install = true,
-		},
 		config = function()
 			require("mason-lspconfig").setup({
-				ensure_installed = { "lua_ls", "ts_ls", "pyright" },
+				ensure_installed = {
+					"lua_ls", -- lua
+					"elixirls", -- elixir
+					"ts_ls", --typescript/javascript
+					"jsonls", --json
+					"pyright", --python
+					"kotlin_language_server", -- kotlin
+					"clangd", -- c/c++
+					"zls", -- zig
+					"rust_analyzer", -- rust
+					"asm_lsp", -- assembly
+					"harper_ls", -- a lot of languages importantly Go C/C++/C# Java Javascript/Typescript Python Ruby Rust fallback
+				},
+				automatic_installation = true,
 			})
 		end,
 	},
