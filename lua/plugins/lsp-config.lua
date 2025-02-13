@@ -76,6 +76,7 @@ return {
         capabilities = capabilities,
       })
       lspconfig.harper_ls.setup({
+        filetypes = { "sh", "bash", "zsh" },
         capabilities = capabilities,
       })
 
