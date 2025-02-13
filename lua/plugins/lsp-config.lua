@@ -75,6 +75,9 @@ return {
       lspconfig.clangd.setup({
         capabilities = capabilities,
       })
+      lspconfig.harper_ls.setup({
+        capabilities = capabilities,
+      })
 
       vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
       vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, { desc = "Go to definition" })
