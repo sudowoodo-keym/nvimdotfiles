@@ -6,7 +6,7 @@ return {
   },
   { "hrsh7th/cmp-nvim-lsp", lazy = false },
   {
-    "williamboman/mason.nvim",
+    "mason-org/mason.nvim",
     lazy = false,
     config = function()
       require("mason").setup({
@@ -21,7 +21,7 @@ return {
     end,
   },
   {
-    "williamboman/mason-lspconfig.nvim",
+    "mason-org/mason-lspconfig.nvim",
     lazy = false,
     config = function()
       require("mason-lspconfig").setup({
@@ -46,8 +46,8 @@ return {
     "neovim/nvim-lspconfig",
     lazy = false,
     dependencies = {
-      "williamboman/mason.nvim",
-      "williamboman/mason-lspconfig.nvim",
+      "mason-org/mason.nvim",
+      "mason-org/mason-lspconfig.nvim",
       "hrsh7th/cmp-nvim-lsp",
     },
     config = function()
@@ -101,7 +101,6 @@ return {
           "py",
           "rb",
           "rs",
-          "sh",
           "swift",
           "toml",
           "ts",
