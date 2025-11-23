@@ -25,19 +25,12 @@ return {
     lazy = false,
     config = function()
       require("mason-lspconfig").setup({
-        ensure_installed = {
-          "elixirls", -- elixir
-          "jsonls", --json
-          "pyright", --python
-          "kotlin_language_server", -- kotlin
-          "clangd", -- c/c++
-          "zls", -- zig
-          "rust_analyzer", -- rust
-          -- "asm_lsp", -- assembly
-          "harper_ls", -- a lot of languages importantly Go C/C++/C# Java Javascript/Typescript Python Ruby Rust fallback
-        },
-        automatic_installation = true,
+        ensure_installed = {},
+        automatic_installation = false,
+        automatic_setup = false,
         automatic_enable = false,
+        handlers = nil,
+
       })
     end,
   },
@@ -53,6 +46,9 @@ return {
       local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
       local lspconfig = require("lspconfig")
+      lspconfig.lua_ls.setup({
+        capabilities = capabilities,
+      })
       lspconfig.pyright.setup({
         capabilities = capabilities,
       })
