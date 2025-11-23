@@ -37,6 +37,7 @@ return {
           "harper_ls", -- a lot of languages importantly Go C/C++/C# Java Javascript/Typescript Python Ruby Rust fallback
         },
         automatic_installation = true,
+        automatic_enable = false,
       })
     end,
   },
