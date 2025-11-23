@@ -35,7 +35,7 @@ return {
           "clangd", -- c/c++
           "zls", -- zig
           "rust_analyzer", -- rust
-          "asm_lsp", -- assembly
+          -- "asm_lsp", -- assembly
           "harper_ls", -- a lot of languages importantly Go C/C++/C# Java Javascript/Typescript Python Ruby Rust fallback
         },
         automatic_installation = true,
