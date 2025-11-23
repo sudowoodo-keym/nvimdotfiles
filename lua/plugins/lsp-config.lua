@@ -26,9 +26,7 @@ return {
     config = function()
       require("mason-lspconfig").setup({
         ensure_installed = {
-          "lua_ls", -- lua
           "elixirls", -- elixir
-          "ts_ls", --typescript/javascript
           "jsonls", --json
           "pyright", --python
           "kotlin_language_server", -- kotlin
@@ -54,13 +52,7 @@ return {
       local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
       local lspconfig = require("lspconfig")
-      lspconfig.ts_ls.setup({
-        capabilities = capabilities,
-      })
       lspconfig.pyright.setup({
-        capabilities = capabilities,
-      })
-      lspconfig.lua_ls.setup({
         capabilities = capabilities,
       })
       lspconfig.zls.setup({
@@ -94,7 +86,6 @@ return {
           "js",
           "jsx",
           "lhs",
-          "lua",
           "md",
           "nix",
           "php",
