@@ -42,14 +42,3 @@ config.setup({
 	highlight = { enable = true },
 	indent = { enable = true },
 })
-vim.lsp.config('harper-ls', {
-    settings = {
-        ["harper-ls"] = {
-            linters = {
-                SpellCheck = false,
-                SpelledNumbers = false,
-                SentenceCapitalizaiton = false,
-            },
-        },
-    },
-})

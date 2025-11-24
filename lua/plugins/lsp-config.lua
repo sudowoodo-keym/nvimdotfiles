@@ -52,58 +52,65 @@ return {
     config = function()
       local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
-      local lspconfig = require("lspconfig")
-      lspconfig.lua_ls.setup({
-        capabilities = capabilities,
-      })
-      lspconfig.pyright.setup({
-        capabilities = capabilities,
-      })
-      lspconfig.zls.setup({
-        capabilities = capabilities,
-      })
-      lspconfig.rust_analyzer.setup({
-        capabilities = capabilities,
-      })
-      lspconfig.asm_lsp.setup({
-        capabilities = capabilities,
-      })
-      lspconfig.clangd.setup({
-        capabilities = capabilities,
-      })
-      lspconfig.harper_ls.setup({
-        filetypes = {
-          "sh",
-          "bash",
-          "zsh",
-          "c",
-          "cmake",
-          "cpp",
-          "cs",
-          "dart",
-          "mail",
-          "git-commit",
-          "go",
-          "hs",
-          "html",
-          "java",
-          "js",
-          "jsx",
-          "lhs",
-          "md",
-          "nix",
-          "php",
-          "py",
-          "rb",
-          "rs",
-          "swift",
-          "toml",
-          "ts",
-          "tsx",
+      -- local lspconfig = require("lspconfig")
+    vim.lsp.config('lua_ls', {
+        settings = {}
+        })
+    vim.lsp.config('pyright', {
+        settings = {}
+        })
+    vim.lsp.config('zls', {
+        settings = {}
+        })
+    vim.lsp.config('rust_analyzer', {
+        settings = {}
+        })
+    vim.lsp.config('asm_lsp', {
+        settings = {}
+        })
+    vim.lsp.config('clangd', {
+        settings = {}
+        })
+    vim.lsp.config('harper-ls', {
+    settings = {
+        ["harper-ls"] = {
+            linters = {
+                SpellCheck = false,
+                SpelledNumbers = false,
+                SentenceCapitalizaiton = false,
+            },
+            filetypes = {
+                "sh",
+                "bash",
+                "zsh",
+                "c",
+                "cmake",
+                "cpp",
+                "cs",
+                "dart",
+                "mail",
+                "git-commit",
+                "go",
+                "hs",
+                "html",
+                "java",
+                "js",
+                "jsx",
+                "lhs",
+                "md",
+                "nix",
+                "php",
+                "py",
+                "rb",
+                "rs",
+                "swift",
+                "toml",
+                "ts",
+                "tsx",
+                },
+            },
         },
-        capabilities = capabilities,
-      })
-
+    })
       vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
       vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, { desc = "Go to definition" })
       vim.keymap.set("n", "<leader>gr", vim.lsp.buf.references, { desc = "Get references" })
