@@ -3,6 +3,10 @@
 -- Add any additional keymaps here
 
 vim.keymap.set("n", "gd", vim.lsp.buf.definition)
+vim.keymap.set("n", "<leader>vca", vim.lsp.buf.code_action)
+vim.keymap.set("n", "<leader>vrr", vim.lsp.buf.references)
+vim.keymap.set("n", "<leader>vrn", vim.lsp.buf.rename)
+
 vim.keymap.set("n", "K", vim.lsp.buf.hover)
 vim.keymap.set("n", "<leader>vd", vim.diagnostic.open_float, { desc = "Show diagnostic"})
 vim.keymap.set('n', '<leader>vk', function()
@@ -11,4 +15,3 @@ vim.keymap.set('n', '<leader>vk', function()
     end, { desc = 'Toggle diagnostic virtual lines' })
 vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { desc = "Go to prev diagnostic"})
 vim.keymap.set("n", "]d", vim.diagnostic.goto_next, { desc = "Go to next diagnositc"})
-vim.keymap.set("n", "<leader>vrn", vim.lsp.buf.rename)
