@@ -74,6 +74,9 @@ return {
     vim.lsp.config('clangd', {
         settings = {}
         })
+    vim.lsp.config('tailwindcss', {
+        settings = {}
+        })
     vim.lsp.config('harper-ls', {
     settings = {
         ["harper-ls"] = {
