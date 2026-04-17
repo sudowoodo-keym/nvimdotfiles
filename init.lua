@@ -31,8 +31,6 @@ local opts = {}
 require("config.lazy")
 require("lazy").setup(plugins, opts)
 
-local builtin = require("telescope.builtin")
-
 local config = require("nvim-treesitter.config")
 config.setup({
 	ensure_installed = { "lua", "javascript", "html", "css", "c", "python" },
