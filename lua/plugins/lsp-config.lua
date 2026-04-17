@@ -86,6 +86,7 @@ return {
                 SentenceCapitalizaiton = false,
             },
             filetypes = {
+                "md",
                 "sh",
                 "bash",
                 "zsh",
