@@ -27,7 +27,6 @@ return {
       require("mason-lspconfig").setup({
         ensure_installed = {
           "lua_ls", -- lua
-          "elixirls", -- elixir
           "ts_ls", --typescript/javascript
           "jsonls", --json
           "pyright", --python

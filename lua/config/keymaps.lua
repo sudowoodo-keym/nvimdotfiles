@@ -3,10 +3,9 @@
 -- Add any additional keymaps here
 
 -- LSP Stuff
-vim.keymap.set("n", "gd", vim.lsp.buf.definition)
-vim.keymap.set("n", "<leader>vca", vim.lsp.buf.code_action)
-vim.keymap.set("n", "<leader>vrr", vim.lsp.buf.references)
-vim.keymap.set("n", "<leader>vrn", vim.lsp.buf.rename)
+vim.keymap.set("n", "gd", vim.lsp.buf.definition, { desc = "Go to definition"})
+vim.keymap.set("n", "<leader>vca", vim.lsp.buf.code_action, { desc = "Go to code action"})
+vim.keymap.set("n", "<leader>vrr", vim.lsp.buf.references, { desc = "Go to references"})
 
 vim.keymap.set("n", "K", vim.lsp.buf.hover)
 vim.keymap.set("n", "<leader>vd", vim.diagnostic.open_float, { desc = "Show diagnostic"})
