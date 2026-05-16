@@ -22,18 +22,12 @@
 
 -- Plugin spec
 return {
-  { "rebelot/kanagawa.nvim" },
+  { "thesimonho/kanagawa-paper.nvim" },
 
   {
     "LazyVim/LazyVim",
-    opts = function(_, opts)
-      local hour = tonumber(os.date("%H"))
-
-      if hour >= 7 and hour < 18 then
-        opts.colorscheme = "kanagawa-lotus"
-      else
-        opts.colorscheme = "kanagawa-dragon"
-      end
-    end,
+    opts = {
+      colorscheme = "kanagawa-paper",
+    },
   },
 }

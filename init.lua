@@ -1,6 +1,14 @@
 -- bootstrap lazy.nvim, LazyVim and your plugins
 vim.g.mapleader = " "
 
+-- Colorscheme Auto Mode
+local hour = tonumber(os.date("%H"))
+if hour >= 8 and hour < 20 then
+  vim.o.background = "light"
+else
+  vim.o.background = "dark"
+end
+
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
 	vim.fn.system({
